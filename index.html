@@ -1,0 +1,290 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css" rel="stylesheet">
+
+<style type="text/css">
+.fixed-height {
+    height: 70vh !important;
+}
+
+}
+</style>
+<div  class="container" >
+<table class="table table-striped table-bordered table-hover fixed-height" id="tableL01">
+</table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">國家完整資料</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body row">
+		  <div class="col-sm-12" style="height:70vh; overflow: auto">
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">name</label>
+                    <div class="col-sm-9">
+                        <input readonly id='name_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">topLevelDomain</label>
+                    <div class="col-sm-9">
+                        <input readonly id='topLevelDomain_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">alpha2Code</label>
+                    <div class="col-sm-9">
+                        <input readonly id='alpha2Code_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">alpha3Code</label>
+                    <div class="col-sm-9">
+                        <input readonly id='alpha3Code_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">callingCodes</label>
+                    <div class="col-sm-9">
+                        <input readonly id='callingCodes_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">capital</label>
+                    <div class="col-sm-9">
+                        <input readonly id='capital_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">altSpellings</label>
+                    <div class="col-sm-9">
+                        <input readonly id='altSpellings_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">region</label>
+                    <div class="col-sm-9">
+                        <input readonly id='region_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">subregion</label>
+                    <div class="col-sm-9">
+                        <input readonly id='subregion_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">population</label>
+                    <div class="col-sm-9">
+                        <input readonly id='population_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">latlng</label>
+                    <div class="col-sm-9">
+                        <input readonly id='latlng_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">demonym</label>
+                    <div class="col-sm-9">
+                        <input readonly id='demonym_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">area</label>
+                    <div class="col-sm-9">
+                        <input readonly id='area_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">gini</label>
+                    <div class="col-sm-9">
+                        <input readonly id='gini_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">timezones</label>
+                    <div class="col-sm-9">
+                        <input readonly id='timezones_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">borders</label>
+                    <div class="col-sm-9">
+                        <input readonly id='borders_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">nativeName</label>
+                    <div class="col-sm-9">
+                        <input readonly id='nativeName_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">numericCode</label>
+                    <div class="col-sm-9">
+                        <input readonly id='numericCode_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">currencies</label>
+                    <div class="col-sm-9">
+                        <input readonly id='currencies_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">languages</label>
+                    <div class="col-sm-9">
+                        <input readonly id='languages_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">translations</label>
+                    <div class="col-sm-9">
+                        <input readonly id='translations_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">regionalBlocs</label>
+                    <div class="col-sm-9">
+                        <input readonly id='regionalBlocs_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		        <div class="form-group row">
+                    <label style="text-align: right;" class="col-3 col-form-label">cioc</label>
+                    <div class="col-sm-9">
+                        <input readonly id='cioc_data' style="text-align: center"  type="text" class="form-control">
+                    </div>
+                </div>
+		  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var $table = $('#tableL01')
+var datas=[]
+var dataUrl= "https://restcountries.eu/rest/v2/all"
+$.ajax({
+    url: dataUrl,
+    method: 'GET',
+    dataType: 'json',
+    data: '',
+    async: true,　
+   
+    success: res =>{
+        datas =res
+        },
+    error: err =>{
+        datas=[]
+        },
+});
+</script>
+<script>
+  window.ajaxOptions = {
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader('Custom-Auth-Token', 'custom-auth-token')
+    }
+  }
+  </script>
+  <script>
+    function ajaxRequest(params) {
+    var url = 'https://restcountries.eu/rest/v2/all'
+    $.get(url + '?' + $.param(params.data)).then(function (res) {
+      params.success(res)
+    })
+  }
+</script>
+<script>
+    $('#tableL01').bootstrapTable('destroy');   //動態載入表格之前，先銷燬表格
+    var tableColumns = [
+		{ field: 'flag', title: '國旗', sortable: false,searchable:false,formatter:imgFormatter},
+        { field: 'name', title: '國家名稱', sortable: true,searchable:true,formatter:btnFormatter},
+        { field: 'alpha2Code', title: '2位國家代碼', sortable: false,searchable:false},
+        { field: 'alpha3Code', title: '3位國家代碼', sortable: false,searchable:false},
+		{ field: 'nativeName', title: '母語名稱', sortable: false,searchable:false},
+		{ field: 'altSpellings', title: '替代國家名稱', sortable: false,searchable:false},
+		{ field: 'callingCodes', title: '國際電話區號', sortable: false,searchable:false},
+		
+    ];
+
+    $('#tableL01').bootstrapTable({//表格初始化
+        columns: tableColumns,  //表頭
+		ajax:ajaxRequest,
+		ajaxOptions:ajaxOptions,
+		//url:'https://restcountries.eu/rest/v2/all',
+        //data: datas, //通過ajax返回的資料
+		dataType:'json',
+        width: 0.3 * Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
+        height: 0.3 * Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
+        method: 'get',
+        pageSize: 25, //每頁3條
+        pageNumber: 1,  //第1頁
+        //pageList: "[25]",   //在使用過程中根據情況調整每頁條數.雖然你現在定義的每頁3條，但你可以隨時調整為10條或25條。
+        cache: false,   //不快取
+        striped: true,
+        pagination: true,
+        sidePagination: true,
+        search: true,
+        showRefresh: false,
+        showExport: false,
+        showFooter: true,
+        exportTypes: ['csv', 'txt', 'xml', 'excel'],
+        clickToSelect: true,
+        sortName: 'name', // 預設排序
+		searchAlign: 'right',
+    });
+	
+	function btnFormatter(value) {
+    return '<button class="btn btn-link" data-toggle="modal" data-target="#exampleModalCenter" onclick="data_show(this)">' + value + '</button>'
+  }
+  	function imgFormatter(value) {
+    return '<img height=30px width=50px src=' + value + '>'
+  }
+</script>
+<script>
+        function data_show(obj) {
+            let jdata_index=parseInt(obj.closest('tr').getAttribute("data-index"));			
+            document.getElementById("name_data").value=datas[jdata_index].name;
+            document.getElementById("topLevelDomain_data").value=datas[jdata_index].topLevelDomain;
+            document.getElementById("alpha2Code_data").value=datas[jdata_index].alpha2Code;
+            document.getElementById("alpha3Code_data").value=datas[jdata_index].alpha3Code;
+            document.getElementById("callingCodes_data").value=datas[jdata_index].callingCodes;
+            document.getElementById("capital_data").value=datas[jdata_index].capital;
+            document.getElementById("altSpellings_data").value=datas[jdata_index].altSpellings;
+            document.getElementById("region_data").value=datas[jdata_index].region;
+            document.getElementById("subregion_data").value=datas[jdata_index].subregion;
+            document.getElementById("population_data").value=datas[jdata_index].population;
+            document.getElementById("latlng_data").value=datas[jdata_index].latlng;
+            document.getElementById("demonym_data").value=datas[jdata_index].demonym;
+            document.getElementById("area_data").value=datas[jdata_index].area;
+            document.getElementById("gini_data").value=datas[jdata_index].gini;
+            document.getElementById("timezones_data").value=datas[jdata_index].timezones;
+            document.getElementById("borders_data").value=datas[jdata_index].borders;
+            document.getElementById("nativeName_data").value=datas[jdata_index].nativeName;
+            document.getElementById("numericCode_data").value=datas[jdata_index].numericCode;
+			document.getElementById("currencies_data").value=datas[jdata_index].currencies;
+            document.getElementById("languages_data").value=datas[jdata_index].languages;
+            document.getElementById("translations_data").value=datas[jdata_index].translations;
+			document.getElementById("regionalBlocs_data").value=datas[jdata_index].regionalBlocs;
+            document.getElementById("cioc_data").value=datas[jdata_index].cioc;
+        }
+</script>
+
+
